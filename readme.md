@@ -9,8 +9,11 @@ A lightweight Flask-based API that provides IPL cricket match data such as teams
 
 ## 🚀 How to Run
 ```bash
+
 pip install -r requirements.txt
 python app.py
+
+```
 
 ## 🛠 Built With
 
