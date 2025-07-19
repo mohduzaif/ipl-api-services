@@ -36,6 +36,8 @@ def team_vs_team():
 
     return jsonify(response)
 
+
+
 @app.route('/api/team-record')
 def team_record():
     team = request.args.get('team')
@@ -44,5 +46,25 @@ def team_record():
 
     return jsonify(response)
 
+
+
+@app.route('/api/batsman-record')
+def batsman_record():
+    batsman = request.args.get('batsman')
+    print(batsman)
+
+    response = api_obj.batter_record_api(batsman)
+
+    # return "Batsman Record is Loading....."
+    return response
+
+
+
+@app.route('/api/bowler-record')
+def bowler_record():
+    bolwer = request.args.get('bowler')
+    response = api_obj.bowler_record_api(bolwer)
+
+    return response
 
 app.run(debug=True)
